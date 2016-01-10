@@ -1,12 +1,12 @@
 StrathHACK - web resources
 =========
 
-###Description
+## Description
 
 This repository contains the web resources for StrathHack, An event hosted by [StrathTech](https://strathtech.co.uk), a society for those with a love of technology at the University of Strathclyde Glasgow.
 
 
-###Project Structure###
+## Project Structure
 
 The project is structured as follows:
 
@@ -14,7 +14,7 @@ The project is structured as follows:
 	- placeholder - A web place holder
 
 
-###License###
+## License
 
 Copyright 2015 StrathTech
 
