@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>StrathHack - StrathTech</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Lets clear out the styles -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<!-- Any libs -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400,700" rel="stylesheet" type="text/css">
+
+	<!-- And now add our styles -->
+	<link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+	<header>
+		<div class="header-content">
+			<div id="animation-container">
+				<canvas id="canvas"></canvas>
+			</div>
+			<div id="header-content-content">
+					<h1>StrathHACK</h1>
+					<h2>Welcome</h2>	
+			</div>
+		</div>		
+	</header>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<script src="js/RAF.polyfill.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenLite.min.js"></script>
+	<script src="js/animation.js"></script>
+	<!-- Piwik -->
+	<script type="text/javascript">
+	  var _paq = _paq || [];
+	  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+	  _paq.push(["setCookieDomain", "*.strathtech.co.uk"]);
+	  _paq.push(["setDomains", ["*.strathtech.co.uk","*.beta.strathtech.co.uk","*.hack.strathtech.co.uk","*.status.strathtech.co.uk","*.www.strathtech.co.uk"]]);
+	  _paq.push(['trackPageView']);
+	  _paq.push(['enableLinkTracking']);
+	  (function() {
+	    var u="//metrics.strathtech.co.uk/";
+	    _paq.push(['setTrackerUrl', u+'piwik.php']);
+	    _paq.push(['setSiteId', 1]);
+	    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+	    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+	  })();
+	</script>
+	<noscript><p><img src="//metrics.strathtech.co.uk/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!-- End Piwik Code -->
+</body>
+</html>

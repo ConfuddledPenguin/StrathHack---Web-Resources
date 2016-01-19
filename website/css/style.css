@@ -59,6 +59,42 @@ h1{
     font-family: 'Oswald', sans-serif;
 }
 
+h3{
+	font-size: 3rem;
+}
+
+a{
+	transition: color 0.5s;
+}
+
+#about, #faq, #strathtech p{
+	text-align: center;
+}
+
+#faq a, #sponsor #sponsor-interested a{
+	text-decoration: underline;
+}
+
+@media (min-width: 1700px){
+	h1{
+		font-size: 20rem;
+	}
+	h2{
+		font-size: 5rem;
+	}
+}
+
+@media (min-width: 1350px){
+
+	h1{
+		font-size: 17rem;
+	}
+	h2{
+		font-size: 4rem;
+	}
+
+}
+
 @media (max-width: 768px){
 
 	h1{
@@ -70,7 +106,7 @@ h1{
 @media (max-width: 600px){
 
 	h1{
-		font-size: 4rem;
+		font-size: 9rem;
     	margin-bottom: 9rem;		
 	}
 
@@ -79,7 +115,23 @@ h1{
 	}
 }
 
+@media (max-width: 600px){
+
+	h1{
+		font-size: 8rem;		
+	}
+
+	h2{
+		font-size: 2rem;
+	}
+}
+
 @media (max-width: 400px){
+
+	h1{
+		font-size: 6rem;
+	}
+
 	p, table{
 		font-size: 1.6rem;
 		line-height: 1.2;
@@ -87,6 +139,10 @@ h1{
 
 	p{
 		text-align: center;
+	}
+
+	#faq p:nth-of-type(2n+1){
+		font-size: 1.8rem;
 	}
 }
 
@@ -106,7 +162,20 @@ h1{
 	background-color: rgba(37, 37, 37, 1);
 }
 
+.navbar-default .navbar-nav>li>a{
+	color: rgba(255,255,255, 0.5);
+}
+
+.navbar-default .navbar-brand{
+	height: 39px;
+}
+
 @media (min-width: 768px){
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: white;
+	outline: none;
+}
 
 .navbar .navbar-header ul *, .navbar-nav *{
 	box-sizing: border-box;
@@ -168,8 +237,14 @@ h1{
 
 .navbar .navbar-header li:hover a,
 .navbar-nav li:hover a,
+.navbar .navbar-header li a:focus,
+.navbar-nav li a:focus,
 .navbar-nav .current a {
   transform: translateY(100%);
+}
+
+.navbar .navbar-header li>.navbar-brand:after{
+	bottom: 110%;
 }
 
 }
@@ -205,23 +280,52 @@ h1{
 
 .header-content{
 	background: linear-gradient(to right, #0076b0 0%,#00315b 100%);
-	background-image: url(http://tnc.agency/wp-content/uploads/2015/12/Fotolia_84795519_Subscription_Monthly_XXL.jpg), linear-gradient(to right, #0076b0 0%,#00315b 100%);
+	/*background-image: url(http://tnc.agency/wp-content/uploads/2015/12/Fotolia_84795519_Subscription_Monthly_XXL.jpg), linear-gradient(to right, #0076b0 0%,#00315b 100%);*/
     background-position: center;
     background-size: cover;
     color: white;
     min-height: 50%;
-    padding-bottom: 3rem;
+    position: relative;
+	width: 100%;
+	height: 85%;
+}
+
+#animation-container{
+	height: 70%;
+	transform: translateY(10%);
+}
+
+/*yes judge me for this name*/
+#header-content-content{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .header-content h1{
 	margin: 0;
-    padding: 11rem 0 2rem 0;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 .header-content h2{
 	text-align: center;
 	padding-bottom: 4rem;
 	margin: 0;
+    color: white;
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 600px){
+	.header-content h2{
+		top: 70%;
+	}
 }
 
 /*
@@ -240,7 +344,7 @@ h1{
 	transition: all 0.5s;
 }
 
-.btn:hover{
+.btn:hover, .btn:focus{
 	background-color: #00315b;
 	color: white;
 }
@@ -265,6 +369,10 @@ h1{
 
 .tile:nth-of-type(2n+2){
 	background-color: #00315b;
+	color: white;
+}
+
+.tile:nth-of-type(2n+2) a:hover{
 	color: white;
 }
 
@@ -309,6 +417,11 @@ h1{
 	width: 100%;
 }
 
+#sponsor #sponsor-interested p{
+	text-align: center;
+	padding-top: 1.5rem;
+}
+
 /*
  * main - location
  */
@@ -333,6 +446,8 @@ h1{
 	opacity: 0.90;
 }
 
+/*
+
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
 
@@ -341,6 +456,21 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 }
 .gmnoprint div {
     background:none !important;
+}
+
+*/
+
+/*
+ * FAQ
+ */
+
+#faq p:nth-of-type(2n+1){
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#faq p:nth-of-type(2n+2){
+	padding-bottom: 1.5rem;
 }
 
 /*
@@ -360,10 +490,23 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 	}	
 }
 
-#signup button{
-	width: 200px;
+#signup p{
+	text-align: center;
+	padding: 6rem 0;
+	font-size: 3rem;
+}
+
+#signup >div > div{
+	padding: 6rem 0;
+}
+
+#signup a{
+	width: 400px;
+	max-width: 90%;
 	display: block;
-	margin: 4rem auto 0 auto;
+	margin: auto;
+	font-size: 2.5rem;
+	transition: all 0.5s;
 }
 
 /*
@@ -382,7 +525,7 @@ footer a{
 }
 
 footer a:hover{
-	color: #777;
+	color: #0076B0;
 }
 
 footer #info{
@@ -447,7 +590,7 @@ footer #contact .spacer{
 	}
 
 	footer #contact{
-		width: 260px;
+		width: 195px;
 		margin: auto;
 		padding-bottom: 4rem;
 	}
