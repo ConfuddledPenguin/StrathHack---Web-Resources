@@ -233,7 +233,7 @@
     <script type="text/javascript">
       var _paq = _paq || [];
       _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
-      _paq.push(["setCookieDomain", "*.strathhack.co.uk"]);
+      _paq.push(["setCookieDomain", "*.strathtech.co.uk"]);
       _paq.push(['trackPageView']);
       _paq.push(['enableLinkTracking']);
       (function() {
