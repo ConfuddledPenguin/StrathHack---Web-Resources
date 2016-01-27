@@ -1,0 +1,598 @@
+
+
+/*
+ * Frame
+ */
+
+body{
+	min-height: 100%;
+	position: relative;
+}
+
+main{
+	margin-top: -50px;
+	padding-bottom: 15rem; 
+}
+
+footer{
+	width: 100%;
+    height: 10rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media ( max-width: 600px){
+	footer{
+		height: 20rem;
+	}
+
+	main{
+		padding-bottom: 20rem;
+	}
+}
+
+/*
+ * Typography
+ */
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+main{
+	line-height: 1.5;
+	font-size: 2rem;
+}
+
+h1{
+	text-align: center;
+    font-size: 14rem;
+    font-family: 'Oswald', sans-serif;
+}
+
+h3{
+	font-size: 3rem;
+}
+
+a{
+	transition: color 0.5s;
+}
+
+#about, #faq, #strathtech p{
+	text-align: center;
+}
+
+#faq a, #sponsor #sponsor-interested a{
+	text-decoration: underline;
+}
+
+@media (min-width: 1700px){
+	h1{
+		font-size: 20rem;
+	}
+	h2{
+		font-size: 5rem;
+	}
+}
+
+@media (min-width: 1350px){
+
+	h1{
+		font-size: 17rem;
+	}
+	h2{
+		font-size: 4rem;
+	}
+
+}
+
+@media (max-width: 768px){
+
+	h1{
+		font-size: 10rem;		
+	}
+
+}
+
+@media (max-width: 600px){
+
+	h1{
+		font-size: 9rem;
+    	margin-bottom: 9rem;		
+	}
+
+	h2{
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 600px){
+
+	h1{
+		font-size: 8rem;		
+	}
+
+	h2{
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 400px){
+
+	h1{
+		font-size: 6rem;
+	}
+
+	p, table{
+		font-size: 1.6rem;
+		line-height: 1.2;
+	}
+
+	p{
+		text-align: center;
+	}
+
+	#faq p:nth-of-type(2n+1){
+		font-size: 1.8rem;
+	}
+}
+
+/*
+ * Header
+ */
+
+.navbar{
+	margin: 0;
+	background-color: rgba(37, 37, 37, 0);
+	border-radius: 0;
+	border: none;
+	transition: background-color 0.5s;
+}
+
+.navbar.scrolled{
+	background-color: rgba(37, 37, 37, 1);
+}
+
+.navbar-default .navbar-nav>li>a{
+	color: rgba(255,255,255, 0.5);
+}
+
+.navbar-default .navbar-brand{
+	height: 39px;
+}
+
+@media (min-width: 768px){
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
+	color: white;
+	outline: none;
+}
+
+.navbar .navbar-header ul *, .navbar-nav *{
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}
+
+.navbar .navbar-header li, .navbar-nav li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+
+.navbar .navbar-header li>a, .navbar-nav>li>a {
+  padding: 0.3em 0;
+  padding-top: 15px;
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.navbar .navbar-header li>a:before,
+.navbar .navbar-header li>a:after,
+.navbar-nav>li>a:before,
+.navbar-nav>li>a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.navbar .navbar-header li>a:before,
+.navbar-nav>li>a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: white;
+}
+
+.navbar .navbar-header li>a:after{
+	padding: 0 !important;
+}
+
+.navbar .navbar-header li>a:after,
+.navbar-nav>li>a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+
+.navbar .navbar-header li:hover a,
+.navbar-nav li:hover a,
+.navbar .navbar-header li a:focus,
+.navbar-nav li a:focus,
+.navbar-nav .current a {
+  transform: translateY(100%);
+}
+
+.navbar .navbar-header li>.navbar-brand:after{
+	bottom: 110%;
+}
+
+}
+
+
+
+
+/*----------------------------------*/
+
+.navbar-default .navbar-toggle{
+	border: none;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+	background-color: initial;
+}
+
+@media (max-width: 768px){
+	.navbar{
+		background-color: rgba(37, 37, 37, 1);
+	}
+}
+
+@media (min-width: 768px){
+	.navbar{
+		padding: 0 5rem;
+	}
+
+	.navbar-collapse{
+		float: right;
+	}
+}
+
+.header-content{
+	background: linear-gradient(to right, #0076b0 0%,#00315b 100%);
+	/*background-image: url(http://tnc.agency/wp-content/uploads/2015/12/Fotolia_84795519_Subscription_Monthly_XXL.jpg), linear-gradient(to right, #0076b0 0%,#00315b 100%);*/
+    background-position: center;
+    background-size: cover;
+    color: white;
+    min-height: 50%;
+    position: relative;
+	width: 100%;
+	height: 85%;
+}
+
+#animation-container{
+	height: 70%;
+	transform: translateY(10%);
+}
+
+/*yes judge me for this name*/
+#header-content-content{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-content h1{
+	margin: 0;
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.header-content h2{
+	text-align: center;
+	padding-bottom: 4rem;
+	margin: 0;
+    color: white;
+    position: relative;
+    top: 60%;
+    transform: translateY(-50%);
+}
+
+@media (min-width: 600px){
+	.header-content h2{
+		top: 70%;
+	}
+}
+
+/*
+ * Forms
+ */
+
+.form-control{
+	border-radius: 0;
+}
+
+.btn{
+	border-radius: 0;
+	background-color: #0076B0;
+	color: white;
+	font-size: 2rem;
+	transition: all 0.5s;
+}
+
+.btn:hover, .btn:focus{
+	background-color: #00315b;
+	color: white;
+}
+
+/*
+ * Main
+ */
+
+.tile{
+	padding: 5rem 0;
+}
+
+.tilecontent{
+	width: 70%;
+	margin: auto;
+}
+
+.tile h3{
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+.tile:nth-of-type(2n+2){
+	background-color: #00315b;
+	color: white;
+}
+
+.tile:nth-of-type(2n+2) a:hover{
+	color: white;
+}
+
+.tile:nth-of-type(2n+3){
+	background-color: #0076B0;
+	color: white;
+}
+
+.tile:last-of-type{
+	background-color: white;
+	color: black;
+	padding-bottom: 10rem;
+}
+
+/*
+ * Main - timeline
+ */
+
+#timeline p{
+	text-align: center;
+}
+
+#timeline table{
+    margin: auto;
+    color: white;
+}
+
+#timeline td:first-of-type:after{
+	content: "-";
+	padding: 0 1rem;
+}
+
+/*
+ * main - sponsor
+ */ 
+
+#sponsor .imgholder{
+	padding: 2rem 2rem;
+}
+
+#sponsor .imgholder img{
+	width: 100%;
+}
+
+#sponsor #sponsor-interested p{
+	text-align: center;
+	padding-top: 1.5rem;
+}
+
+/*
+ * main - location
+ */
+
+#location a{
+	display: block;
+	background-color: #777;
+}
+
+#location a img{
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+@media (max-width: 990px){
+	#location a, #location a img{
+		width: 100%;
+	}
+}
+
+#location a img:hover{
+	opacity: 0.90;
+}
+
+/*
+
+a[href^="http://maps.google.com/maps"]{display:none !important}
+a[href^="https://maps.google.com/maps"]{display:none !important}
+
+.gmnoprint a, .gmnoprint span, .gm-style-cc {
+    display:none;
+}
+.gmnoprint div {
+    background:none !important;
+}
+
+*/
+
+/*
+ * FAQ
+ */
+
+#faq p:nth-of-type(2n+1){
+	font-weight: bold;
+	font-size: 110%;
+}
+
+#faq p:nth-of-type(2n+2){
+	padding-bottom: 1.5rem;
+}
+
+/*
+ * main - sign up
+ */
+
+#signup form{
+	width: 700px;
+	margin: auto;
+}
+
+@media (max-width: 900px){
+	#signup form{
+		width: 100%;
+		max-width: 500px;
+		margin: auto;
+	}	
+}
+
+#signup p{
+	text-align: center;
+	padding: 6rem 0;
+	font-size: 3rem;
+}
+
+#signup >div > div{
+	padding: 6rem 0;
+}
+
+#signup a{
+	width: 400px;
+	max-width: 90%;
+	display: block;
+	margin: auto;
+	font-size: 2.5rem;
+	transition: all 0.5s;
+}
+
+/*
+ * Footer
+ */
+
+footer{
+	background-color: rgb(37, 37, 37);
+	color: white;
+	padding: 2rem 5rem;
+}
+
+footer a{
+	color: white;
+	transition: color 0.5s;
+}
+
+footer a:hover{
+	color: #0076B0;
+}
+
+footer #info{
+	float: left;
+}
+
+footer #info li{
+	padding-bottom: 1rem;
+}
+
+footer #contact{
+	float: right;
+}
+
+footer #contact li{
+	float: left;
+	padding: 0 1rem 0 1rem;
+}
+
+footer #contact a{
+	text-decoration: none;
+}
+
+footer #contact a:before{
+	font-size: 4.5rem;
+	font-family: icomoon;
+	text-decoration: none;
+}
+
+footer #email:before{
+	content: "\ea83";
+}
+
+footer #twitter:before{
+	content: "\ea92";
+}
+
+footer #facebook:before{
+	content: "\ea8d";
+}
+
+footer #github:before{
+	content: "\eab1";
+}
+
+footer #contact .spacer{
+	display: none;
+}
+
+@media (max-width: 600px){
+
+	footer #contact .spacer{
+		display: block;
+	}
+
+	footer #info, #contact{
+		float: none !important;
+	}
+
+	footer #info{
+		text-align: center;
+	}
+
+	footer #contact{
+		width: 195px;
+		margin: auto;
+		padding-bottom: 4rem;
+	}
+
+}
