@@ -23,6 +23,19 @@ $('#nav-about').click(function(event){
 
 })
 
+$('#nav-faq').click(function(event){
+
+	event.preventDefault();
+
+	clearCurrent();
+	$(this).addClass('current');
+
+	$('html, body').animate({
+        scrollTop: $("#faq").offset().top
+    }, 1000);
+
+})
+
 $('#nav-timeline').click(function(event){
 
 	event.preventDefault();
