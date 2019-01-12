@@ -17,8 +17,3 @@ The project is structured as follows:
 ## License
 
 Copyright 2015 StrathTech
-
-
-Lead Contributors:
-
-Thomas Maxwell - [website](http://tom-maxwell.com)
